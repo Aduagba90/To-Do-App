@@ -75,8 +75,8 @@ class UserServiceImplTest {
     public void checkIfUserCanLogIn(){
         registerUse();
         LoginRequest loginRequest = new LoginRequest();
-        loginRequest.setEmail("murital@gmail.com");
-        loginRequest.setPassword("Murital");
+        loginRequest.setEmail("idris98@gmail.com");
+        loginRequest.setPassword("Abubakr");
         LoginResponse loginResponse = userService.login(loginRequest);
         loginResponse.setMessage("Successfully logged in!");
     }

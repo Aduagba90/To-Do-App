@@ -24,9 +24,9 @@ class TaskServiceImplTest {
     @Test
     public void testThatUserCanAddTask() {
         AddTaskRequest addTaskRequest = new AddTaskRequest();
-        addTaskRequest.setTitle("Cook");
+        addTaskRequest.setTitle("Reading");
         addTaskRequest.setDescription("process to be taken be cook in the Kitchen");
-        addTaskRequest.setUserEmail("musa");
+        addTaskRequest.setUserEmail("idris98@gmail.com");
         AddTaskResponse addTaskResponse = taskService.addTask(addTaskRequest);
         assertNotNull(addTaskResponse);
         assertThat(addTaskResponse.getMessage()).isEqualTo("Task added successfully");

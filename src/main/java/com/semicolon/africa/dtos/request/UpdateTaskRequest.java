@@ -7,5 +7,5 @@ import lombok.Setter;
 @Getter
 public class UpdateTaskRequest {
     private String title;
-    private String description;
+    private String note;
 }

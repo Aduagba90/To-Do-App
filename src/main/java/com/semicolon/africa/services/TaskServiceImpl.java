@@ -43,7 +43,7 @@ public class TaskServiceImpl implements TaskService{
         newTask.setDueDate(LocalDate.now());
         newTask.setCompleted(true);
         taskRepository.save(newTask);
-        user.getTasks().add(newTask);
+//        user.getTasks().add(newTask);
         userService.userTask(user);
         AddTaskResponse addTaskResponse = new AddTaskResponse();
         addTaskResponse.setUserEmail(addTaskRequest.getUserEmail());
@@ -59,7 +59,7 @@ public class TaskServiceImpl implements TaskService{
             throw new RuntimeException("Task with" + updateTaskRequest.getTitle() + "not found");
         }
         newTask.setTitle(updateTaskRequest.getTitle());
-        newTask.setDescription(updateTaskRequest.getDescription());
+        newTask.setDescription(updateTaskRequest.getNote());
         newTask.setDueDate(LocalDate.now());
         newTask.setCompleted(true);
         taskRepository.save(newTask);
